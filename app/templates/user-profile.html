@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>User profile</h1>
+    <form action="'/user-profile'" method="post">
+        <td><input autocomplete="off" autofocus name="post_username" placeholder="Username" type="text"></td>
+        {% for post in user_profile %}
+            <div class="center">
+                <h4>{{ post['title'] }}</h4> 
+                <p>{{ post['content'] }}</p>
+                <a href="/post-entry">Reply</a> <a href="/post-edit">edit</a>
+            </div>
+        {% endfor %}
+    </form>
+    </ul>
+{% endblock %}

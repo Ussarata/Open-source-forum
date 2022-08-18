@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Delete Post:</h1>
+    <div class="center">
+        <form action="/delete-post" method="delete">
+            What post title do you want to delete:
+            <input autocomplete="off" autofocus name="post_title" placeholder="Title" type="text">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+{% endblock %}

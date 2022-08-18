@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Edit Post:</h1>
+    <div class="center">
+        <form action="/edit-post" method="post">
+            <input autocomplete="off" autofocus name="post_username" placeholder="Username" type="text"><br>
+            <input autocomplete="off" autofocus name="post_title" placeholder="Title of post to edit" type="text"><br>
+            <input class = "content" autocomplete="off" autofocus name="post_new_content" placeholder="New content" type="text"><br>
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+{% endblock %}

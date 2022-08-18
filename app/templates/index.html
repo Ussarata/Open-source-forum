@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Timeline</h1>
+    <form action="/" method="post">
+        {% for post in timeline %}
+            <div class="center">
+                <h4>{{ post['title'] }} from user {{ post['user_id'] }}</h4> 
+                <p>{{ post['content'] }}</p>
+                <td><input type="checkbox" name="post_item" value={{ post['post_id'] }}></td>
+                <a href="/post-edit">edit</a>
+            </div>
+        {% endfor %}
+        <input type="submit" value="Delete Posts">
+    </form>
+    </ul>
+{% endblock %}
